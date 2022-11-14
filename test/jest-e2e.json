@@ -1,0 +1,18 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "roots": ["<rootDir>/src/", "<rootDir>/libs/"],
+  "setupFilesAfterEnv": ["./jest-setup.ts"],
+  "moduleNameMapper": {
+    "@shared/types": "<rootDir>/libs/shared/src/types",
+    "@shared/validators": "<rootDir>/libs/shared/src/validators",
+    "@shared/constants": "<rootDir>/libs/shared/src/constants",
+    "@shared": "<rootDir>/libs/shared/src",
+    "@shared/(.*)": "<rootDir>/libs/shared/src/*"
+  }
+}
